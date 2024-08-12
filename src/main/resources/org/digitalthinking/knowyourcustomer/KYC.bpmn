@@ -41,7 +41,7 @@
     <inclusiveGateway id="_76E80914-0BB7-4E33-8420-07DDC2A7EDE8" gatewayDirection="Diverging" />
     <scriptTask id="_B9A6B51C-1763-40E2-9F54-B00B7103572D" name="Approvado" scriptFormat="http://www.java.com/java" >
       <script>conn conexion = new conn();
-Namas = conexion.ConnectionTest();
+Names = conexion.ConnectionTest();
 System.out.println(Names);</script>
     </scriptTask>
     <scriptTask id="_DB1961D8-B17E-4C06-AC03-1F3742AE8DC6" name="Rechazado" scriptFormat="http://www.java.com/java" >
