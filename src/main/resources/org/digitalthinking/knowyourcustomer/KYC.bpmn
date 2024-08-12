@@ -23,6 +23,9 @@
 
   <process processType="Private" isExecutable="true" id="KnowYourCustomer.KYC" name="KYC" tns:packageName="org.digitalthinking.knowyourcustomer" tns:version="1.0" >
 
+    <extensionElements>
+     <tns:import name="org.digitalthinking.knowyourcustomer.conn" />
+    </extensionElements>
     <!-- process variables -->
     <property id="Names" itemSubjectRef="_NamesItem"/>
     <property id="SurNames" itemSubjectRef="_SurNamesItem"/>
@@ -37,13 +40,8 @@
     <startEvent id="_A9F5BF13-D18C-4B25-AE62-2A835F4CA3A2"  isInterrupting="true"/>
     <inclusiveGateway id="_76E80914-0BB7-4E33-8420-07DDC2A7EDE8" gatewayDirection="Diverging" />
     <scriptTask id="_B9A6B51C-1763-40E2-9F54-B00B7103572D" name="Approvado" scriptFormat="http://www.java.com/java" >
-      <script>import org.digitalthinking.knowyourcustomer.ConnectionTest
-
-
-ConnectionTest conexion = new ConnectionTest();
-
-Namas = conexion.conn();
-
+      <script>conn conexion = new conn();
+Namas = conexion.ConnectionTest();
 System.out.println(Names);</script>
     </scriptTask>
     <scriptTask id="_DB1961D8-B17E-4C06-AC03-1F3742AE8DC6" name="Rechazado" scriptFormat="http://www.java.com/java" >
